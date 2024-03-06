@@ -7,18 +7,29 @@ The aims of this workflow:
 - Generate mutated protein sequences.
 - Identify position and substitution of mutations.
 - Generate structure prediction models for mutated and reference proteins.
-- Make functional predictions of mutations in different ssamples.
+- Make functional predictions of mutations in different samples.
 
 ## Installation
+
+To visualize and verify consensus sequence:
 - IGV (version 2.17.2; Robinson et al., 2011)
+  - https://igv.org/
+ 
+To create consensus sequence:
 - Pandas (version 2.1.1; McKinney, W. & others, 2010, pp.51--56)
   - pip install pandas
+  - https://pandas.pydata.org/
+- Python (version 3.11.6)
+  - https://www.python.org/
 
 ## Data
 - Reference genome:
   - C_excelsa_V5.fasta
 - Reference annotation:
-  - C_excelsa_V%_braker2_wRseq.gff3
+  - C_excelsa_V5_braker2_wRseq.gff3
 - Variant call files:
-  - UK_scan_dips.vcf
-  - UK_scan_tets.vcf
+  - UK_scan_dips.vcf (diploids)
+  - UK_scan_tets.vcf (tetraploids)
+- Gene names:
+  - g30996 (chromosome 3)
+  - g50328 (chromosome 6)
