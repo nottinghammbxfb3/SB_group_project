@@ -21,6 +21,9 @@ To create consensus sequence:
   - https://pandas.pydata.org/
 - Python (version 3.11.6)
   - https://www.python.org/
+- Argparse (version 1.1)
+  - pip install argparse
+  - https://docs.python.org/3/library/argparse.html
 
 ## Data
 - Reference genome:
