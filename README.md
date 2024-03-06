@@ -36,3 +36,41 @@ To create consensus sequence:
 - Gene names:
   - g30996 (chromosome 3)
   - g50328 (chromosome 6)
+ 
+## Code
+To create consensus proteins:
+- Using VCF_consensus.py:
+  - chromosome_number  Chromosome number
+  - gene_name          Gene name (Same format as in GFF file)
+  - gff_path           Path to GFF file
+  - vcf_path           Path to VCF file
+  - reference_path     Path to reference FASTA file
+  - snp_finder_output  Output file for SNP finder (.csv)
+  - consensus_output   Output file for consensus sequence (.txt)
+  - dna_to_aa_output   Output file for DNA to AA translation (.txt)
+- Example usage:
+  - python VCF_consensus.py 6 g50328 gff_file.gff3 vcf_file.vcf reference_genome.fasta snps_out.csv consensus_out.txt translation_out.txt
+ 
+Function explanation: (For detail on code used please view VCF_consensus.py)
+- SNP finder:
+  - Reads VCF file into pandas dataframe
+  - Selects specified chromosome rows
+  - Reads GFF file in to pandas dataframe
+  - Selects specified chromsome, gene name and coding regions
+  - Selects VCF rows corresponding to coding regions identified in GFF file
+  - Create seperate VCF subsets of multiallelic and biallelic sites
+  - Create alternative allele frequency column for both subsets
+  - For biallelic subset, select rows above 0.5 frequency (most frequent)
+  - For multiallelic subset, create reference allele frequency column:
+    - Identify most frequent alternative allele
+    - Remove rows where reference is more frequent than most frequent alternative allele
+    - Checking throughout there are any alternative alleles remaining to avoid downstream error
+  - Merge biallelic and multiallelic subsets and output as .csv for consensus
+  - 
+
+
+
+
+
+
+
