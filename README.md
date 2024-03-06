@@ -40,6 +40,7 @@ Generating structural and functional predictions for candidate genes generated b
 # Code
 ## To create consensus proteins:
 - Using VCF_consensus.py:
+```diff
   - chromosome_number  Chromosome number
   - gene_name          Gene name (Same format as in GFF file)
   - gff_path           Path to GFF file
@@ -48,10 +49,12 @@ Generating structural and functional predictions for candidate genes generated b
   - snp_finder_output  Output file for SNP finder (.csv)
   - consensus_output   Output file for consensus sequence (.txt)
   - dna_to_aa_output   Output file for DNA to AA translation (.txt)
+```
 - Example usage:
-  - python VCF_consensus.py 6 g50328 gff_file.gff3 vcf_file.vcf reference_genome.fasta snps_out.csv consensus_out.txt translation_out.txt
- 
-## Function explanation: (For detail on code used please view VCF_consensus.py)
+```diff
+python VCF_consensus.py 6 g50328 gff_file.gff3 vcf_file.vcf reference_genome.fasta snps_out.csv consensus_out.txt translation_out.txt
+ ```
+## VCF_consensus.py function explanation: (For detail on code used please view VCF_consensus.py)
 ### SNP finder:
   - Reads VCF file into pandas dataframe
   - Selects specified chromosome rows
