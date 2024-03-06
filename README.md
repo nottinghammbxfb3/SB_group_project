@@ -54,7 +54,7 @@ Generating structural and functional predictions for candidate genes generated b
 ```diff
 python VCF_consensus.py 6 g50328 gff_file.gff3 vcf_file.vcf reference_genome.fasta snps_out.csv consensus_out.txt translation_out.txt
  ```
-## VCF_consensus.py function explanation: (For detail on code used please view VCF_consensus.py)
+## VCF_consensus.py function explanation: (For detail on code used view VCF_consensus.py)
 ### SNP finder:
   - Reads VCF file into pandas dataframe
   - Selects specified chromosome rows
@@ -105,7 +105,21 @@ python VCF_consensus.py 6 g50328 gff_file.gff3 vcf_file.vcf reference_genome.fas
     - Start with start codon (M)
     - End with stop codoon (_)
     - Likely, fewest mismatches in multiple sequence alignment with reference
+## Sequence alignment (For detail on code used view seq_align.py)
+  - Algins 2 protein sequences of equal length
+  - Outputs to .txt file
+  - Example output:
+```diff
+Number of mutations: 2
 
+Pos: 9
+Ref: M
+Alt: T
+
+Pos: 42
+Ref: D
+Alt: N
+```
 
 
 
