@@ -143,7 +143,7 @@ Alt: N
   - Align models:
     - align diploid_model.pbd, reference_model.pbd
   - Colour mutated residues:
-    - color red, (resi 7 or 21) and diploid_model.pbd
+    - color red, (resi 7 or resi 21) and diploid_model.pbd
   - Colour truncated segments:
     - color blue, (resi 98-123) and reference_model.pbd
   - Interpretation criteria:
