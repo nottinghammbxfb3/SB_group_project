@@ -89,15 +89,15 @@ python VCF_consensus.py 6 g50328 gff_file.gff3 vcf_file.vcf reference_genome.fas
     | Cexcelsa_scaf_6 | 3693361 | A | C |
 ### Consensus
   - Read in reference fasta file for specified chromsome sequence as a string
-  - Using snps output .csv file replace single nucleotide polymorphisms in reference chromosome
-  - Using GFF file, as in "SNP finder" extract coding regions from chromosome
+  - Using the SNP finder output .csv file replace single nucleotide polymorphisms in reference chromosome
+  - Using GFF file, as in SNP finder extract coding regions from chromosome
   - Output consensus sequence as a string, consisting of mutated coding regions, as .txt file
   - Example output:
 ```diff
     TCATGTAACAATGGAATCACCTGCTGAGCTGGTTTCGCCTTCGAGCCCAAAAA...
 ```
 ### DNA to amino acid
-  - Read in consensus output file
+  - Read in Consensus output file
   - Translate first 3 reading frames using codon to amino acid translation dictionary
   - Create reverse complement of DNA sequence
   - Translate final 3 reading frames using codon to amino acid translation dictionary
