@@ -3,7 +3,7 @@ Generating structural and functional predictions for candidate genes generated b
 
 # Introduction
 ## The aims of this workflow:
-- To create a consensus sequence of most common alleles at each nucleotide from tetraploid and diploid samples for candidate genes.
+- To create a consensus sequence of most common alleles at each nucleotide site from tetraploid and diploid samples for candidate genes.
 - Generate mutated protein sequences.
 - Identify position and substitution of mutations.
 - Generate structure prediction models for mutated and reference proteins.
