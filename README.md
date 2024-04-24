@@ -148,7 +148,8 @@ Alt: N
     - Colour truncated segments:
       - color blue, (resi 98-123) and reference_model.pbd
 
-
+## Declaration:
+All work was produced by myself
 
 
 
